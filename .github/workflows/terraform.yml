@@ -45,3 +45,8 @@ jobs:
     
       - name: Apply Terraform Plan
         run: terraform apply tfplan -auto-approve
+
+  ansible-configuration:
+    name: Ansible Configuration
+    runs-on: ubuntu-latest
+    needs: terraform-apply
